@@ -1,0 +1,11 @@
+<input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox">
+<p></p>
+<table class="content-table" *ngFor="let emp of customerData | filter: {name: searchText, Age:searchText,  blog: searchText}; let i=index;" >
+  <tr>
+    <td >{{i +1}}</td>
+    <td >{{emp.name}}</td>
+    <td >{{emp.Age}}</td>
+    <td >{{emp.blog}}</td>
+  </tr>
+</table>
+
